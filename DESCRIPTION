@@ -1,0 +1,15 @@
+Package: STA485
+Title: Functions for Simulation Study
+Version: 0.1.1
+Authors@R: "Kody Gelvin <kg834@nau.edu> [aut,cre]"
+	"Jaxon Vaughn <jkv45@nau.edu> [aut, cre]"
+	"Derek Sonderegger <derek.sonderegger@nau.edu> [aut, cre]"
+Description: No summary description here.
+Depends:
+    R (>= 3.4.0),
+    ggplot2, 
+    grid,
+    dplyr (>= 0.2.0)
+License: GPL 3
+LazyData: true
+RoxygenNote: 6.0.1
