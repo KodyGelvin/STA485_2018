@@ -8,10 +8,6 @@
 #' gam_analysis(data, N=10000)
 #' @export
 
-title: "gamanalysis"
-author: "Jaxon Quillen"
-date: "February 2, 2018"
-output: html_document
 ---
 
 ```{r, echo=FALSE}
