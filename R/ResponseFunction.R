@@ -12,13 +12,14 @@
 #'  t <- seq(-2, 10, by=.001)
 #'  y <- response( t, stepwise_params )
 #'  plot(t, y)
+#'  @export
 response <- function(input.t, params = list()){
   if(params$method == 'step'){
     y <- ifelse(0 < input.t & input.t < params$duration, params$max.height, params$baseline)     
   }else{
     error("params$method should be either 'step' or ...")
   }
-  return( y )
+  return(y) 
 }
 
 

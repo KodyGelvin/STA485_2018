@@ -1,4 +1,3 @@
----
 #' Calculate Area under the curve when the curve is defined by thousands of gam-predicted points
 #' 
 #' @param data a data frame with columns t & y
@@ -7,28 +6,6 @@
 #' data <- data.frame( t = 1:10, y = rnorm(10))
 #' gam_analysis(data, N=10000)
 #' @export
-
----
-
-```{r, echo=FALSE}
-library(tidyverse)
-library(mgcv)
-
-pointwise.integrate <- function(t, y){
-  
-  f <- function(t.grid, t.obs, y.obs){
-    out <- approx( t.obs, y.obs, xout=t.grid ) 
-    return(out$y)
-  }
-  
-  integrate(f, min(t), max(t), t, y )    
-  
-}
-
-data <- data.frame(t=1:10, y=abs(rnorm(10)))
-data <- data.frame(t=0:10, y=1)
-pointwise.integrate(data$t, data$y)
-
 gam_analysis <- function(data, formula = y~s(t), N=10000){
   Model <- gam(formula, data=data)
   t.grid = data.frame(t=seq(0,max(data$t),length=N) )
@@ -37,7 +14,4 @@ gam_analysis <- function(data, formula = y~s(t), N=10000){
   return(AUC)
 }
 
-gam_analysis(data, N=100)
-
-```
 

@@ -9,7 +9,11 @@ Depends:
     R (>= 3.4.0),
     ggplot2, 
     grid,
-    dplyr (>= 0.2.0)
+    dplyr (>= 0.2.0),
+    mgcv
 License: GPL 3
 LazyData: true
 RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
