@@ -3,15 +3,15 @@
 #' @param data a data.frame with columns t and y
 #' @examples 
 #' data <- data.frame( t = 1:10, y = rnorm(10))
-#' pointwise.integrate(data)
+#' pointwise.integrate(data$t, data$y)
 #' @export
-pointwise.integrate <- function(data){
+pointwise.integrate <- function(t, y){
   
-  f <- function(t, data){
-    out <- approx( data$t, data$y, xout=t ) 
+  f <- function(t.grid, t.obs, y.obs){
+    out <- approx( t.obs, y.obs, xout=t.grid ) 
     return(out$y)
   }
   
-  integrate(f, min(data$t), max(data$t), data )    
+  integrate(f, min(t), max(t), t, y )    
   
 }
