@@ -7,8 +7,8 @@
 #' stepwise_params = list(
 #'    method = 'step',
 #'    max.height = 2,
-#'    baseline = 5,
-#'    duration = 7)
+#'    baseline = 1,
+#'    duration = 10)
 #'  t <- seq(-2, 10, by=.001)
 #'  y <- response( t, stepwise_params )
 #'  plot(t, y)

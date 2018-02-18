@@ -6,6 +6,7 @@
 #' data <- expand.grid( t=1:10, Subject_ID = 1:10 ) %>% mutate( y = rnorm(n()))
 #' pointwise_analysis(data) 
 #' @export 
+#' library(dplyr)
 pointwise_analysis <- function(data, by='Subject_ID'){
   out <- data %>%
     group_by_( by ) %>%
