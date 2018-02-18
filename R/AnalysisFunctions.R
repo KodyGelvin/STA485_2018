@@ -13,12 +13,5 @@ pointwise.integrate <- function(t, y){
   }
   
   integrate(f, min(t), max(t), t, y )    
-  
-<<<<<<< HEAD
 }
-=======
-  
-  pointwise.integrate <- function(t, y){
-  
-}
->>>>>>> 43fcf070df6b204574f2019646a3c2067f05a8d0
+
