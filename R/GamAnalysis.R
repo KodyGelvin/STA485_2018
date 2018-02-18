@@ -6,6 +6,7 @@
 #' data <- data.frame( t = 1:10, y = rnorm(10))
 #' gam_analysis(data, N=10000)
 #' @export
+#' library(mgcv)
 gam_analysis <- function(data, formula = y~s(t), N=10000){
   Model <- gam(formula, data=data)
   t.grid = data.frame(t=seq(0,max(data$t),length=N) )
